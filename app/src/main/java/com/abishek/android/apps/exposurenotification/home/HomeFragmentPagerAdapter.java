@@ -21,7 +21,6 @@ package com.abishek.android.apps.exposurenotification.home;
 import static com.abishek.android.apps.exposurenotification.home.HomeFragment.TAB_DEBUG;
 import static com.abishek.android.apps.exposurenotification.home.HomeFragment.TAB_EXPOSURES;
 import static com.abishek.android.apps.exposurenotification.home.HomeFragment.TAB_NOTIFY;
-import static com.abishek.android.apps.exposurenotification.home.HomeFragment.TAB_UPDATES;
 
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
@@ -52,8 +51,6 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
         return new NotifyHomeFragment();
       case HomeFragment.TAB_DEBUG:
         return new DebugHomeFragment();
-      case HomeFragment.TAB_UPDATES:
-        return new UpdatesFragment();
       case HomeFragment.TAB_EXPOSURES:
         // fall through.
       default:
@@ -63,7 +60,7 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
 
   @Override
   public int getCount() {
-    return 4;
+    return 3;
   }
   /* TODO: Disable debug*/
 

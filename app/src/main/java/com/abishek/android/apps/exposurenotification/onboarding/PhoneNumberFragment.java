@@ -47,6 +47,7 @@ public class PhoneNumberFragment extends Fragment {
   @Override
   public void onViewCreated(View view, Bundle savedInstanceState) {
     Button sendOTP = view.findViewById(R.id.verify_phone_number_button);
+    Button skipOTP = view.findViewById(R.id.skip_phone_number_button);
     EditText phoneNumberEditText = view.findViewById(R.id.text_field_phone_number);
     String otp = generateOTP();
     sendOTP.setOnClickListener(v -> {
@@ -74,6 +75,15 @@ public class PhoneNumberFragment extends Fragment {
               .show();
         }
       }
+    });
+    /*TODO: disable in release?*/
+    skipOTP.setOnClickListener(v -> {
+      FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+      fragmentTransaction.replace(
+          R.id.home_fragment, new OnboardingPermissionFragment(), ExposureNotificationActivity.HOME_FRAGMENT_TAG);
+      fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+      fragmentTransaction.addToBackStack(null);
+      fragmentTransaction.commit();
     });
   }
   private static String generateOTP(){

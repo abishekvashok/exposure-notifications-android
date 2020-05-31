@@ -58,4 +58,12 @@
     android:layout_marginTop="24dp"
     android:layout_marginHorizontal="@dimen/padding_normal"
     android:text="@string/send_otp" />
+  <!-- TODO: Remove in possible release?-->
+  <Button
+    android:id="@+id/skip_phone_number_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginHorizontal="@dimen/padding_normal"
+    android:text="@string/skip_for_now" />
 </LinearLayout>

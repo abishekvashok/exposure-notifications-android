@@ -49,13 +49,12 @@ public class HomeFragment extends Fragment {
 
   // Constants so the tabs are settable by name and not just index.
   @Retention(RetentionPolicy.SOURCE)
-  @IntDef({TAB_EXPOSURES, TAB_NOTIFY, TAB_DEBUG, TAB_UPDATES})
+  @IntDef({TAB_EXPOSURES, TAB_NOTIFY, TAB_DEBUG})
   @interface TabName {}
 
   static final int TAB_EXPOSURES = 0;
   static final int TAB_NOTIFY = 1;
   static final int TAB_DEBUG = 2;
-  static final int TAB_UPDATES = 3;
 
   static final int TAB_DEFAULT = TAB_NOTIFY;
 
@@ -106,8 +105,6 @@ public class HomeFragment extends Fragment {
     tabLayout.getTabAt(TAB_NOTIFY).setText(R.string.home_tab_notify_text);
     tabLayout.getTabAt(TAB_DEBUG).setIcon(R.drawable.ic_cog);
     tabLayout.getTabAt(TAB_DEBUG).setText(R.string.home_tab_notify_debug_text);
-    tabLayout.getTabAt(TAB_UPDATES).setIcon(R.drawable.ic_announcement);
-    tabLayout.getTabAt(TAB_UPDATES).setText(R.string.updates);
   }
 
   @Override

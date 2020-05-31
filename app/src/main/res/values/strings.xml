@@ -35,7 +35,7 @@
 
   <string name="generic_error_message">Internal error, please try again.</string>
 
-  <string name="onboarding_welcome_text">Welcome to the Kerala COVID-19 tracking App</string>
+  <string name="onboarding_welcome_text">Welcome to the Exposure Notifications Android</string>
 
   <string name="onboarding_start_text">
     [Actual copy to be provided by Public Health Authority]\n\n
@@ -376,5 +376,6 @@
     \n\nNever share your OTP with anyone.
   </string>
   <string name="change_phone_number">Change Phone number</string>
+  <string name="skip_for_now">Skip for now</string>
 
 </resources>
